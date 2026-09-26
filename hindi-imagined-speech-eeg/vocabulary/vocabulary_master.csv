@@ -1,0 +1,13 @@
+stimulus_id,hindi_text,transliteration,english_translation,category,candidate_tier,part_of_speech,phonological_complexity,word_frequency,familiarity,age_of_acquisition,syllable_count,character_count,concreteness,emotional_salience,selection_status,rationale,source
+V001,हाँ,haan,Yes,basic_communication,core,interjection/particle,NA,NA,NA,NA,1,3,NA,NA,candidate,Minimum viable binary communication signal,Team brainstorm; cf. EEGIS and BCI Competition Track 3 vocabularies
+V002,नहीं,nahin,No,basic_communication,core,negation particle,NA,NA,NA,NA,2,5,NA,NA,candidate,Minimum viable binary communication signal,Team brainstorm; cf. EEGIS and BCI Competition Track 3 vocabularies
+V003,मदद,madad,Help,assistance,core,noun,NA,NA,NA,NA,2,4,NA,NA,candidate,Core assistive-communication request word,Team brainstorm; cf. EEGIS (Ayuda) and BCI Competition Track 3 (Help me)
+V004,रुको,ruko,Stop / Wait,assistance,core,verb (imperative),NA,NA,NA,NA,2,4,NA,NA,candidate,"Core control/assistance command — NOTE: flagged as ambiguous between ""stop"" and ""wait""; see docs/vocabulary_rationale.md for open discussion on whether to split into two distinct items",Team brainstorm; cf. BCI Competition Track 3 (Stop)
+V005,पानी,paani,Water,physical_need,core,noun,NA,NA,NA,NA,2,4,NA,NA,candidate,Immediate concrete physiological need,Team brainstorm; cf. EEGIS (Sed/thirst-adjacent)
+V006,खाना,khaana,Food,physical_need,core,"noun (also functions as verbal noun ""to eat"" — flagged as a possible ambiguity)",NA,NA,NA,NA,2,4,NA,NA,candidate,Immediate concrete physiological need,Team brainstorm; cf. EEGIS (Hambre/hunger)
+V007,दर्द,dard,Pain,physical_need,core,noun,NA,NA,NA,NA,1,3,NA,NA,candidate,High-priority physical-distress communication word,Team brainstorm; cf. EEGIS (Dolor)
+V008,आराम,aaraam,Rest,physical_need,core,noun,NA,NA,NA,NA,3,5,NA,NA,candidate,Basic comfort-related request,Team brainstorm
+V009,दवा,dawa,Medicine,physical_need,extended,noun,NA,NA,NA,NA,2,3,NA,NA,candidate,Extends physical-need category toward medical context,Team brainstorm
+V010,खुश,khush,Happy,emotional_state,extended,adjective,NA,NA,NA,NA,1,3,NA,NA,candidate,"Extended emotional-state item; communication target only, see docs/vocabulary_rationale.md",Team brainstorm
+V011,डर,dar,Fear,emotional_state,extended,noun,NA,NA,NA,NA,1,2,NA,NA,candidate,"Extended emotional-state item; communication target only, see docs/vocabulary_rationale.md",Team brainstorm
+V012,चिंता,chinta,Worry,emotional_state,extended,noun,NA,NA,NA,NA,2,4,NA,NA,candidate,"Extended emotional-state item; communication target only, see docs/vocabulary_rationale.md",Team brainstorm

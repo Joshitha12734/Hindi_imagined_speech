@@ -1,0 +1,7 @@
+# Schema + placeholder example rows. "NOT_A_REAL_TIMESTAMP" is used instead of a
+# plausible-looking number specifically so these rows cannot be mistaken for
+# recorded data if this file is opened without reading this header.
+# See docs/data_dictionary.md for full field definitions.
+participant_id,session_id,trial_id,trial_number,block_number,condition,language,stimulus_id,stimulus_text,stimulus_category,trial_type,cue_onset,imagination_onset,imagination_offset,rest_onset,rest_offset,response,artifact_flag,artifact_type,valid_trial,notes
+EXAMPLE_P001,EXAMPLE_S001,EXAMPLE_P001_S001_T0001,1,1,covert,Hindi,V001,हाँ,basic_communication,practice,NOT_A_REAL_TIMESTAMP,NOT_A_REAL_TIMESTAMP,NOT_A_REAL_TIMESTAMP,NOT_A_REAL_TIMESTAMP,NOT_A_REAL_TIMESTAMP,NA,NA,NA,NA,Example row only — no real recording exists
+EXAMPLE_P001,EXAMPLE_S001,EXAMPLE_P001_S001_T0002,2,1,rest,Hindi,NA,NA,NA,practice,NOT_A_REAL_TIMESTAMP,NOT_A_REAL_TIMESTAMP,NOT_A_REAL_TIMESTAMP,NOT_A_REAL_TIMESTAMP,NOT_A_REAL_TIMESTAMP,NA,NA,NA,NA,Example row only — no real recording exists

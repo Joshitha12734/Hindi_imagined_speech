@@ -1,0 +1,5 @@
+stimulus_id,hindi_text,transliteration,english_translation,category,selection_status,rationale
+V009,दवा,dawa,Medicine,physical_need,candidate,Extends physical-need category toward medical context
+V010,खुश,khush,Happy,emotional_state,candidate,"Extended emotional-state item; communication target only, see docs/vocabulary_rationale.md"
+V011,डर,dar,Fear,emotional_state,candidate,"Extended emotional-state item; communication target only, see docs/vocabulary_rationale.md"
+V012,चिंता,chinta,Worry,emotional_state,candidate,"Extended emotional-state item; communication target only, see docs/vocabulary_rationale.md"

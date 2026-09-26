@@ -1,0 +1,7 @@
+# Schema + placeholder example rows. No real participants recorded yet.
+# The "EXAMPLE_" prefix on participant_id is deliberate: it must never be
+# mistaken for a real participant code once actual recording begins.
+# See docs/data_dictionary.md for full field definitions.
+participant_id,age,sex,native_language,other_languages,language_proficiency,education_level,handedness,hearing_status,vision_status,neurological_history,medication_status,caffeine_before_session,nicotine_before_session,sleep_hours,session_id,recording_date,consent_public_release
+EXAMPLE_P001,NOT_RECORDED,NOT_RECORDED,Hindi,English,NOT_RECORDED,NOT_RECORDED,Right,Normal,Normal,None reported,None reported,No,No,NOT_RECORDED,EXAMPLE_S001,NOT_YET_SCHEDULED,NOT_YET_DECIDED
+EXAMPLE_P002,NOT_RECORDED,NOT_RECORDED,Hindi,English,NOT_RECORDED,NOT_RECORDED,Right,Normal,Corrected,None reported,None reported,No,No,NOT_RECORDED,EXAMPLE_S001,NOT_YET_SCHEDULED,NOT_YET_DECIDED

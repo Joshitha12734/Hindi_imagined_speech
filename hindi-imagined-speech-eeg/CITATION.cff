@@ -1,0 +1,33 @@
+cff-version: 1.2.0
+message: >-
+  This repository currently documents an in-progress research protocol
+  and design artifacts (experimental protocol, vocabulary rationale,
+  metadata schemas, preprocessing plan) — it is NOT yet a dataset, since
+  no EEG data has been collected. type is set to "software" rather than
+  "dataset" for this reason. Update type to "dataset" (and complete the
+  fields below) only once an actual dataset exists and is released.
+title: "Hindi Imagined-Speech EEG Dataset for Thought-to-Text and Mental Health Applications"
+type: software
+status: in-development
+authors:
+  - family-names: "[To be added]"
+    given-names: "[To be added]"
+    affiliation: "[Institution name — to be added]"
+supervisors:
+  - family-names: "Goyal"
+    given-names: "Nidhi"
+    email: "nidhi.goyal@mahindrauniversity.edu.in"
+    # NOTE (open decision, not yet resolved): including a supervisor's
+    # institutional email here is standard academic practice and the
+    # address is already public via the university directory, so this
+    # is not treated as participant-level PII. Even so, confirm with
+    # Dr. Goyal whether she is comfortable with it appearing in a
+    # public repository before this repo is made public, and remove or
+    # replace with a department contact if she prefers.
+repository-code: "[GitHub URL — to be added once repository is published]"
+license: MIT
+date-released: "[Not yet released]"
+notes: >-
+  Placeholder CITATION.cff. Do not cite this project as a completed
+  dataset or published work until this file is updated to reflect an
+  actual release.

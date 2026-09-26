@@ -1,0 +1,9 @@
+stimulus_id,hindi_text,transliteration,english_translation,category,selection_status,rationale
+V001,हाँ,haan,Yes,basic_communication,candidate,Minimum viable binary communication signal
+V002,नहीं,nahin,No,basic_communication,candidate,Minimum viable binary communication signal
+V003,मदद,madad,Help,assistance,candidate,Core assistive-communication request word
+V004,रुको,ruko,Stop / Wait,assistance,candidate,Core control/assistance command
+V005,पानी,paani,Water,physical_need,candidate,Immediate concrete physiological need
+V006,खाना,khaana,Food,physical_need,candidate,Immediate concrete physiological need
+V007,दर्द,dard,Pain,physical_need,candidate,High-priority physical-distress communication word
+V008,आराम,aaraam,Rest,physical_need,candidate,Basic comfort-related request

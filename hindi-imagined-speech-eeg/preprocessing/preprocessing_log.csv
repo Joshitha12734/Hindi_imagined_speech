@@ -1,0 +1,9 @@
+# Audit-trail schema. Empty of real entries — no preprocessing has been performed yet (no data exists).
+# pipeline_commit = commit hash of the preprocessing code (code/preprocessing/) used for THIS row.
+# code_commit = commit hash of whatever downstream analysis/modeling code (code/analysis/) later
+# consumes this processed output, if applicable — kept separate from pipeline_commit because
+# preprocessing and analysis are different codebases that version independently (see
+# code/preprocessing/README.md and code/analysis/README.md). Leave code_commit blank/NA at the
+# preprocessing stage; it is filled in only when a specific analysis run references this file.
+# See docs/data_dictionary.md for full field definitions.
+participant_id,session_id,trial_id,raw_file,preprocessing_version,pipeline_commit,code_commit,filter_type,highpass_hz,lowpass_hz,notch_filter_hz,reference_method,artifact_method,channels_removed,bad_channel_count,ica_applied,ica_components_removed,epoch_start_s,epoch_end_s,baseline_correction,artifact_flag,artifact_type,artifact_percentage,quality_control_status,trial_status,reason_for_rejection,notes
