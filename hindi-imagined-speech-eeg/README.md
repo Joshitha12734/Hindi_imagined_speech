@@ -1,8 +1,5 @@
 # Hindi Imagined-Speech EEG Dataset
 
-**Status:** Early-stage student research project — protocol design phase.
-**Supervisor:** Dr. Nidhi Goyal
-**Institution:** [To be added]
 
 ---
 
