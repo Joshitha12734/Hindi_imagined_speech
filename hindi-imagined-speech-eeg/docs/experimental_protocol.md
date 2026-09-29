@@ -1,341 +1,235 @@
 # Experimental Protocol
 
-**Status:** Draft — under development / pending supervisor review.
-Nothing in this document should be treated as final until it carries an
-explicit sign-off note from Dr. Goyal.
+**Status:** Current protocol-aligned draft.  
+This document reflects the current supervisor/committee protocol supplied for the study. Items explicitly identified as requiring confirmation remain marked as pending.
 
 ---
 
 ## 1. Objective
 
-To design and pilot a controlled recording protocol for collecting EEG
-(and, where feasible, EMG) data while participants silently imagine
-speaking Hindi words and phrases, producing a dataset suitable for
-later exploration of imagined-speech decoding.
+To collect a controlled EEG dataset while healthy adult Hindi-speaking participants silently imagine speaking Hindi words. The resulting dataset will support research into Hindi imagined speech / inner-speech BCI and proof-of-concept classification of imagined-word conditions and rest.
 
 ## 2. Research Question
 
-Can EEG signals recorded during silent, instructed imagination of a
-Hindi word or phrase contain reproducible information about the
-intended linguistic target? This protocol is designed to generate data
-that can be used to investigate this question — it does not assume the
-answer.
+Can EEG signals recorded during silent, instructed imagination of Hindi words contain reproducible information about the intended linguistic target?
+
+The study is designed to investigate this question; it does not assume a successful decoding result in advance.
 
 ## 3. Participant Criteria
 
-- Fluent Hindi speakers (native or high-proficiency), 18–45 years old.
-  This range is a **proposed default**, not a theoretically required
-  one — chosen as a broad, commonly-used healthy-adult range in
-  comparable EEG literature to limit developmental- and aging-related
-  EEG variability while keeping recruitment feasible for a student
-  team. It should be revisited and explicitly justified (or narrowed/
-  widened) with Dr. Goyal rather than treated as fixed by convention.
-- No self-reported history of neurological or psychiatric disorders,
-  and no history of brain surgery.
-- Not currently taking medication known to significantly affect central
-  nervous system activity (screened via questionnaire).
-- Handedness is recorded for every participant. **No exclusion based on
-  handedness is currently planned** — left-handed participants are not
-  excluded by default. If the team later decides to restrict the
-  initial cohort to right-handed participants only, that decision
-  should be made explicitly, with a stated reason (e.g. a specific
-  laterality-related confound identified during piloting), rather than
-  applied automatically as a literature convention.
-- Normal or corrected-to-normal hearing and vision (relevant if audio
-  or visual cues are used).
+The current committee protocol specifies:
 
-Exact target sample size: **to be determined**, in discussion with Dr.
-Goyal, based on available recording time and hardware access. See
-`docs/vocabulary_rationale.md` and the open-items list at the end of
-this document.
+- Healthy adult Hindi-speaking volunteers.
+- Target sample: **10 participants**.
+- Age range: **18–35 years**.
+- Screening is completed before enrollment/recording.
+- Written informed consent is obtained before EEG recording.
 
-## 4. Screening
+The supplied protocol should be treated as the source of truth for the final inclusion/exclusion wording. Do not reintroduce the previous 18–45-year proposed range from the earlier draft.
 
-Before enrollment, each prospective participant completes a short
-screening questionnaire covering:
+## 4. Screening and Consent
 
-- Age, handedness, native language, other languages spoken, and
-  self-rated Hindi/English proficiency and dominance.
-- Neurological and psychiatric history (self-report).
-- Current medication use.
-- Recent caffeine and nicotine use (same-day).
-- Hours of sleep the previous night.
-- Hearing and vision status.
+Participants complete the study's approved screening procedure before recording. Written informed consent is obtained before any recording.
 
-Screening responses determine eligibility but are **not** used to make
-any claim about a participant's mental-health status. See
-`docs/ethical_considerations.md`.
+Consent and participant-identifying documents are stored separately from coded EEG research data and are not committed to this repository.
 
-## 5. Consent
+## 5. Experimental Setup
 
-Written informed consent is obtained before any recording. The consent
-form must, at minimum:
+Participants are seated comfortably in the recording environment and view the Hindi stimulus on a display. The task is designed as a silent imagined-speech task.
 
-- Explain the purpose of the study in plain language.
-- Explain what EEG recording involves and any physical sensations
-  associated with electrode placement/gel.
-- State explicitly what the data can and cannot reveal (i.e. it is not
-  a diagnostic or mental-state-reading procedure).
-- Describe how data will be anonymized and stored.
-- Describe whether/how data may be released publicly in the future, and
-  obtain separate, explicit consent for that specific possibility.
-- Describe the right to withdraw at any point, including after
-  recording, and what withdrawal means for already-collected data.
+## 6. EEG Acquisition
 
-Consent template: **to be drafted**, reviewed by Dr. Goyal and the
-institutional ethics body before use.
+The current protocol identifies the EEG hardware as requiring confirmation between the proposed systems, including **OpenBCI Cyton+Daisy and Emotiv EPOC+**. Until the final device is confirmed, this repository must not hard-code a device-specific channel count, montage, sampling rate, reference, ground, or file format.
 
-## 6. Experimental Setup
+Once the actual hardware is used, the acquisition metadata must record the exact device and configuration.
 
-Recording will take place in a quiet room with minimal visual and
-auditory distraction. Participants will be seated comfortably at a
-consistent viewing distance from a display screen (distance and screen
-specifications: **to be determined** once hardware is finalized).
+## 7. Trial Structure
 
-## 7. EEG Acquisition
+Each experimental trial follows the current protocol timing:
 
-**Hardware has not yet been finalized.** This section will be completed
-with exact device model, channel count, and specifications once
-determined, in consultation with Dr. Goyal and based on lab access.
+1. **500 ms — fixation**
+2. **300 ms — Hindi word display**
+3. **3000 ms — imagined speech**
+4. **1000 ms — rest/reset**
 
-Planned parameters, several marked as placeholders:
+Visual summary:
 
-| Parameter | Value |
+```text
+FIXATION (500 ms)
+        ↓
+HINDI WORD (300 ms)
+        ↓
+IMAGINED SPEECH (3000 ms)
+        ↓
+REST / RESET (1000 ms)
+        ↓
+NEXT TRIAL
+```
+
+Participants silently imagine saying the displayed Hindi word during the 3000 ms production window. The task does not require overt speech.
+
+## 8. Recording Structure
+
+The current protocol specifies:
+
+| Stage | Trials | Approx. duration |
+|---|---:|---:|
+| Practice | 55 | ~4 min |
+| Main Block 1 | 110 | ~8.8 min |
+| Main Block 2 | 110 | ~8.8 min |
+| Main Block 3 | 110 | ~8.8 min |
+| Main Block 4 | 110 | ~8.8 min |
+
+The final session/break arrangement should follow the approved implementation.
+
+## 9. Stimulus Classes
+
+The current recording protocol specifies **6 Hindi word classes/stimuli**. The final approved stimulus list should be kept synchronized between the stimulus-presentation software, vocabulary documentation, event logs, and trial metadata.
+
+## 10. Covert / Imagined Speech Condition
+
+Participants silently imagine speaking the displayed Hindi word. They should not overtly speak during the imagined-speech window. The recording protocol is intended to capture EEG associated with the instructed covert task rather than actual vocal production.
+
+## 11. Event Markers
+
+The repository uses the following marker vocabulary for synchronizing trial stages with EEG:
+
+| Marker | Meaning |
 |---|---|
-| Device | To be determined |
-| Channel count | To be determined (target: as many as available hardware supports) |
-| Sampling rate | To be determined (comparable published work uses 128–500 Hz) |
-| Reference electrode | To be determined |
-| Ground electrode | To be determined |
-| EMG channels (optional) | Under discussion — see Section 12 |
+| `REST_ON` | Rest/reset begins |
+| `CUE_ON` | Hindi word is presented |
+| `IMAGINE_ON` | Imagined-speech window begins |
+| `IMAGINE_OFF` | Imagined-speech window ends |
+| `TRIAL_END` | Trial is complete |
 
-## 8. Electrode Placement
+The marker-generation mechanism and measured marker-to-EEG latency/jitter must be validated with the final hardware before the main study.
 
-Planned: an international 10–20 or 10–10 system layout, exact montage
-**to be determined** by final channel count and device. If EMG is used,
-placement will target the masseter (jaw) and/or laryngeal region,
-following precedent in reviewed literature (see
-`docs/literature_review.md`).
+See [`docs/event_marker_protocol.md`](event_marker_protocol.md).
 
-## 9. Recording Parameters
+## 12. Data Naming
 
-**Left as placeholders until hardware is finalized.** Do not treat any
-value below as final:
+Use a participant/session structure that keeps raw EEG, event information, and processed data separate. A BIDS-inspired naming convention may be used without claiming full BIDS compliance:
 
-- Band-pass filter range: to be determined (typical published range:
-  approximately 0.1–70 Hz; final choice depends on hardware and
-  research goals).
-- Notch filter: to be determined based on local power-line frequency
-  (50 Hz is standard for India, unlike the 60 Hz used in some
-  North American datasets we reviewed).
-- Recording file format: to be determined (e.g. `.edf` is common in
-  comparable studies).
-
-## 10. Trial Structure
-
-Each trial follows this general sequence. Exact durations for each
-stage are **proposed defaults**, not final values, and must be piloted
-before use in real data collection.
-
-1. Inter-trial rest (blank screen / fixation).
-2. Stimulus cue presented (format — text, audio, or both — under
-   discussion; see Section 12).
-3. Brief preparation interval.
-4. Production window: participant either speaks aloud (overt condition)
-   or silently imagines speaking (covert condition), depending on the
-   block.
-5. Post-trial rest before the next trial begins.
-
-A visual summary:
-
-```
-REST → CUE → PREPARATION → PRODUCTION (overt or covert) → REST → next trial
-```
-
-## 11. Rest Periods
-
-- Inter-trial rest: jittered duration (proposed: 1.5–2.5 s) to avoid
-  participants anticipating trial onset.
-- A longer resting-state baseline (proposed: ~1 minute, eyes open) is
-  planned at the start and end of each session, following common
-  practice in the literature reviewed, to provide a noise/state
-  reference independent of the task.
-
-## 12. Overt Speech Condition — If Approved
-
-Whether an overt-speech condition is included (participants say the
-word aloud, in addition to imagining it) is **under discussion, not yet
-finalized**. Rationale for including it: several reviewed datasets pair
-overt and covert articulation of the same items, which provides a
-built-in way to check that the covert condition is doing something
-distinct from actual speech production. If approved, the overt
-condition would precede the covert condition for each item, matching
-common practice in the literature.
-
-## 13. Covert Speech Condition
-
-Participants are instructed to silently imagine saying the target
-word/phrase: no vocalization, no lip or tongue movement, no whispering,
-no lip-syncing. The instruction wording itself needs to be piloted and
-possibly refined — participants may interpret "imagine saying" in
-different ways (imagining hearing the word vs. imagining producing it),
-and this ambiguity is a known issue in the literature (see
-`docs/literature_review.md`).
-
-## 14. Event Markers
-
-**Decision required.** Two general approaches were considered:
-
-- **Self-initiated marker** (e.g. a participant keypress immediately
-  before each utterance/imagination): used in some reviewed studies,
-  but a keypress-based marker is not compatible with the target
-  population this project's long-term motivation refers to (e.g.
-  patients with limited motor function).
-- **Cue-locked, fixed-duration marker**: timing is predetermined and
-  identical across trials, driven by the stimulus presentation system
-  rather than a participant action.
-
-**Current recommendation (not yet finalized): cue-locked marking**, to
-keep the protocol closer to what would eventually be usable by a
-motor-impaired population, at the cost of being less naturalistic than
-self-paced production. This must be discussed with Dr. Goyal and
-piloted before being locked in.
-
-### 14.1 Formal Event-Marker Table
-
-Whichever marking method is chosen, every trial must emit a
-well-defined, unambiguous set of markers. Proposed marker set (names
-and exact generating system to be confirmed during pilot testing):
-
-| Marker | Meaning | Generated by |
-|---|---|---|
-| `REST_ON` | Inter-trial or baseline rest begins | Stimulus presentation system, on a fixed/jittered timer |
-| `CUE_ON` | Stimulus (word/phrase) is presented | Stimulus presentation system, at cue display time |
-| `IMAGINE_ON` | Production window begins (participant starts speaking or imagining) | Stimulus presentation system (cue-locked design) or participant action (if a self-initiated design is used instead) |
-| `IMAGINE_OFF` | Production window ends | Stimulus presentation system, at fixed window end (cue-locked design) |
-| `TRIAL_END` | Trial fully completed, ready for next trial | Stimulus presentation system |
-
-This table should be finalized alongside the event-marking method
-decision (Section 14, and Open Item #4 below) and is directly relevant
-to the Preprocessing Team's epoching step
-(`preprocessing/preprocessing_pipeline.md`, Step 12) — epoching cannot
-be correctly implemented until this table is locked.
-
-## 15. Data Naming Conventions
-
-Planned: a BIDS-inspired (not fully BIDS-compliant) naming structure:
-
-```
+```text
 sub-P001/
 └── ses-S001/
     ├── eeg/
-    │   └── sub-P001_ses-S001_task-imaginedspeech_eeg.edf
+    │   └── sub-P001_ses-S001_task-imaginedspeech_eeg.<native-format>
     └── events/
         └── sub-P001_ses-S001_task-imaginedspeech_events.tsv
 ```
 
-This repository does not currently claim full BIDS compliance. Full
-BIDS compliance is a possible future goal, not a current property of
-this dataset.
+The exact native EEG file format depends on the hardware actually used.
 
-## 16. Quality Checks
+## 13. Metadata
 
-Planned per-session quality checks (to be implemented as part of
-`code/quality_control/`):
+### Participant metadata
 
-- Verify actual channel count and sampling rate match the intended
-  configuration.
-- Verify all expected event markers are present and correctly ordered.
-- Verify recording duration matches the expected session length.
-- Flag sessions with excessive noise or missing data for review before
-  inclusion in preprocessing.
+`metadata/participant_metadata.csv` stores coded participant-level information required by the approved study and for interpreting data quality. Direct identifiers must not be stored here.
 
-## 17. Preprocessing
+### Trial metadata
 
-See `preprocessing/preprocessing_pipeline.md` for the full planned
-pipeline (filtering, re-referencing, artifact removal, epoching). No
-filtering or epoching parameters are finalized in this document.
+`metadata/trial_metadata.csv` stores one row per trial, including coded participant/session identifiers, block/trial number, stimulus/class information, event timing, and quality-control fields.
 
-## 18. Artifact Handling
+The schema must remain synchronized with the actual event stream.
 
-Planned approach: ICA-based removal of ocular and cardiac artifacts,
-following common practice in the reviewed literature. If EMG is
-recorded, EMG-based flagging of trials with detectable subvocalization
-is planned as an additional quality-control step (rather than assuming
-the covert-speech instruction alone guarantees a clean trial).
+## 14. Quality Control
 
-## 19. Epoching
+Before processing a session, verify:
 
-Planned: epochs time-locked to the production-window onset marker
-(Section 14), with an epoch window and baseline period **to be
-finalized jointly with the preprocessing pipeline design** — see
-`preprocessing/preprocessing_pipeline.md`.
+- Recording duration
+- Actual channel count
+- Actual sampling rate
+- Presence and order of expected event markers
+- Marker timing/latency
+- Missing or corrupted EEG segments
+- Excessive noise or bad channels
+- Trial-level quality flags
+- Consistency between raw event logs and trial metadata
 
-## 20. Trial Rejection
+Any rejected session or trial must be documented rather than silently removed.
 
-Criteria for excluding a trial (e.g. excessive artifact, missing
-marker, participant error) will be defined and logged systematically in
-`preprocessing/preprocessing_log.csv` once real data collection begins.
-No rejection criteria have been applied to any data yet, since no data
-has been collected.
+## 15. Preprocessing
 
-## 21. Data Storage
+The preprocessing pipeline should be applied only after the actual EEG hardware and recording configuration are confirmed.
 
-Raw and processed data will be stored following the structure in
-`data/raw/README.md` and `data/processed/README.md`. Identifiable data
-(if any exists outside the anonymized coded dataset, e.g. signed
-consent forms) will be stored separately from this repository, under
-institutional data-security requirements, and will never be committed
-to version control.
+The general workflow is:
 
-## 22. Privacy
+1. Inspect raw recording integrity.
+2. Verify acquisition metadata.
+3. Verify event markers.
+4. Identify bad channels/segments.
+5. Apply the approved filtering strategy.
+6. Re-reference according to the approved acquisition/preprocessing configuration.
+7. Handle ocular/cardiac and other artifacts using the approved method.
+8. Epoch around the synchronized `IMAGINE_ON` event.
+9. Perform trial-level quality checks/rejection.
+10. Save processed data and a reproducible preprocessing log.
 
-See `docs/ethical_considerations.md` for the full privacy policy. In
-brief: only anonymized, coded participant data is intended to appear in
-this repository; no names, registration numbers, phone numbers, email
-addresses, or other directly identifying information will be included.
+Final filter cutoffs, epoch windows, baseline treatment, artifact thresholds, and device-specific settings should be finalized from the actual hardware/pilot data and supervisor-approved protocol. They must not be invented in advance.
 
-## 23. Reproducibility
+## 16. Artifact Handling
 
-Every preprocessing decision applied to real data (filter values,
-component rejection counts, epoch windows, trial exclusions) will be
-logged per participant in `preprocessing/preprocessing_log.csv`, so
-that processing can be audited and reproduced rather than treated as a
-black box.
+Eye and muscle artifacts are important quality-control considerations for imagined-speech EEG. The exact artifact-removal/rejection procedure should be selected after hardware confirmation and pilot testing and then documented in the preprocessing log.
 
-## 24. Pilot Testing
+## 17. Epoching
 
-A small internal pilot (proposed: 2–3 team members as participants,
-reduced vocabulary) is planned before recruiting external participants,
-to catch protocol issues (confusing instructions, timing problems,
-excessive fatigue) cheaply. Pilot data will be clearly separated from
-main-study data and is not intended for inclusion in any released
-dataset.
+The primary task epoch should be anchored to the synchronized `IMAGINE_ON` marker so that the 3000 ms imagined-speech window can be identified consistently across trials.
 
-## 25. Future Improvements
+Any additional baseline or analysis window must be documented explicitly in the preprocessing configuration.
 
-- Finalize hardware and recording parameters (Sections 7–9).
-- Resolve the event-marking method decision (Section 14) through
-  piloting.
-- Resolve the overt-speech-condition question (Section 12).
-- Expand vocabulary coverage following pilot results and supervisor
-  input.
-- Formalize the consent and ethics-submission documents.
+## 18. Trial Rejection
 
----
+A trial may be flagged for review/rejection when, for example, it has missing or corrupted EEG, invalid/missing markers, excessive artifact, or a documented participant/protocol error.
 
-## Open Items Requiring Team / Supervisor Decision
+Every rejection must have a recorded reason in the preprocessing/QC log.
 
-| # | Open item | Status |
-|---|---|---|
-| 1 | Target sample size | Not decided |
-| 2 | EEG hardware and channel count | Not decided — depends on lab access |
-| 3 | Cue format (text / audio / both) | Not decided |
-| 4 | Event-marking method (cue-locked vs. self-initiated) | Leaning cue-locked; not finalized |
-| 5 | Whether an overt-speech condition is included | Not decided |
-| 6 | Whether EMG monitoring is included | Not decided |
-| 7 | Exact trial timings | Draft proposed; not piloted |
-| 8 | Ethics/IRB submission | Not yet submitted |
+## 19. Data Storage and Privacy
 
-This table should be treated as the live agenda for protocol-finalization
-discussions with Dr. Goyal.
+- Raw and processed EEG are kept separate.
+- Participant identifiers are coded.
+- Names, registration numbers, contact information, consent forms, and other directly identifying records must not be committed to GitHub.
+- Consent and identifying documents remain under the appropriate institutional storage process.
+- Any future data sharing must follow the approved consent and institutional data-governance requirements.
+
+## 20. Analysis Output
+
+The intended downstream analysis includes proof-of-concept classification distinguishing imagined-word conditions and rest. Model results must be reported only after data quality, preprocessing, and evaluation procedures have been documented.
+
+A classification result must not be interpreted as evidence of mental-health diagnosis or direct access to a participant's private thoughts.
+
+## 21. Pilot / Validation Before Main Recording
+
+Before relying on the pipeline for the main dataset, validate:
+
+1. Stimulus timing.
+2. Event-marker count and order.
+3. Marker-to-EEG latency/jitter.
+4. Trial/block transitions.
+5. Recording integrity.
+6. Participant understanding of the imagined-speech instruction.
+7. Preprocessing and metadata generation on pilot data.
+
+## 22. Protocol-Controlled Items
+
+### Current protocol values
+
+- Target participants: **10**
+- Participant age: **18–35 years**
+- Hindi word classes/stimuli: **6**
+- Fixation: **500 ms**
+- Word display: **300 ms**
+- Imagined speech: **3000 ms**
+- Rest/reset: **1000 ms**
+- Practice: **55 trials (~4 min)**
+- Main blocks: **4 × 110 trials (~8.8 min each)**
+
+### Items requiring confirmation
+
+- Final EEG hardware
+- Exact channel configuration/montage
+- Device-specific acquisition parameters
+- Exact marker implementation and measured latency/jitter
+- Any other item explicitly marked for confirmation in the current supervisor/committee material
+
+Do not silently replace these pending items with assumptions from earlier project drafts or unrelated EEG datasets.
