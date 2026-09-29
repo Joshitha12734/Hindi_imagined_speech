@@ -59,6 +59,21 @@ These timings should be implemented consistently by the stimulus-presentation sy
 
 The exact session/break arrangement should follow the final supervisor-approved implementation.
 
+## Participant Documents
+
+The repository now includes protocol-aligned participant-facing and operational documents:
+
+| File | Purpose |
+|---|---|
+| [`participant_information_sheet.md`](participant_information_sheet.md) | Plain-language explanation of the study, procedure, risks, benefits, privacy, withdrawal, and future data use |
+| [`informed_consent_form.md`](informed_consent_form.md) | Written informed consent and optional future-use/public-sharing consent |
+| [`participant_invitation_email.md`](participant_invitation_email.md) | Recruitment/invitation email template |
+| [`participant_screening_form.md`](participant_screening_form.md) | Eligibility and safety screening template |
+| [`participant_instructions.md`](participant_instructions.md) | Instructions given to participants before/during the imagined-speech task |
+| [`eeg_session_checklist.md`](eeg_session_checklist.md) | Research-team checklist for setup, recording, QC, and data handling |
+
+These are **templates for the study team** and should be finalized against the latest ethics-approved versions before being used with participants.
+
 ## EEG Hardware
 
 The current protocol identifies the EEG hardware as an item requiring confirmation between the proposed systems (including OpenBCI Cyton+Daisy / Emotiv EPOC+). Therefore:
@@ -215,6 +230,12 @@ hindi-imagined-speech-eeg/
 ├── LICENSE
 ├── CITATION.cff
 ├── CHANGELOG.md
+├── participant_information_sheet.md
+├── informed_consent_form.md
+├── participant_invitation_email.md
+├── participant_screening_form.md
+├── participant_instructions.md
+├── eeg_session_checklist.md
 ├── docs/
 │   ├── experimental_protocol.md
 │   ├── event_marker_protocol.md
