@@ -99,15 +99,12 @@ I understand that the study materials specify a **minimum retention period of fi
 
 I understand that I may not receive a direct personal benefit from participating. I understand that the expected benefit is primarily to scientific research and future Hindi-language brain-computer interface development.
 
-### 12. Compensation / reimbursement
 
-I understand that any reimbursement, compensation, or other participant payment will be provided only if it is specified in the final ethics-approved participant materials.
-
-### 13. Research results
+### 12. Research results
 
 I understand that the study is intended for dataset development and proof-of-concept research. I understand that individual EEG recordings are not intended to provide a diagnosis or clinical interpretation.
 
-### 14. Questions or concerns
+### 13. Questions or concerns
 
 I understand that I may contact the study team if I have questions about the study or my participation.
 
